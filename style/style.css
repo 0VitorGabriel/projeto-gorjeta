@@ -23,6 +23,11 @@ h1 {
     padding-bottom: 25px;
 }
 
+h3 {
+    text-align: center;
+    padding: 5px;
+}
+
 input, p {
     padding: 5px;
 }
