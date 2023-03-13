@@ -8,13 +8,15 @@
 
 body {
     background-color: darkgray;
+    margin: 10px;
 }
 
 main {
+    border-radius: 15px;
     background-color: #ffffff;
     max-width: 600px;
     min-height: 200px;
-    margin: auto;
+    margin: 100px auto; 
     padding: 10px;
 }
 
