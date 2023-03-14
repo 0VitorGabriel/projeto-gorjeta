@@ -24,6 +24,12 @@ let soma_gorjeta = () => {
     return resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
 }
 
-porcentagem_gorjeta.addEventListener('input', calcula_gorjeta)
+porcentagem_gorjeta.addEventListener('input', function () {
+    calcula_gorjeta()
+    soma_gorjeta()
+})
 
-valor.addEventListener('input', soma_gorjeta)
+valor.addEventListener('input', function () {
+    calcula_gorjeta()
+    soma_gorjeta() 
+})
