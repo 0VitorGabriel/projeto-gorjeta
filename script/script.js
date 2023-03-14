@@ -12,25 +12,20 @@ porcentagem_gorjeta.addEventListener('input', function () {
     mostrar_porcentagem.innerHTML = Number(porcentagem_gorjeta.value)
 })
 
-function calcula_gorjeta() {
-    return resultado_gorjeta.innerHTML = Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
-}
-
-function soma_gorjeta() {
-    return resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+function calcula_soma_gorjeta() {
+    let calcula_gorjeta = function () {
+        return resultado_gorjeta.innerHTML = Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
+    }
+    let soma_gorjeta = function () {
+        return resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+    }
+    return calcula_gorjeta() , soma_gorjeta()
 }
 
 porcentagem_gorjeta.addEventListener('mouseup', function () {
-    calcula_gorjeta()
-    soma_gorjeta()
+    calcula_soma_gorjeta()
 })
 
 valor.addEventListener('mouseout', function () {
-    calcula_gorjeta()
-    soma_gorjeta()
+    calcula_soma_gorjeta()
 })
-
-
-
-
-
