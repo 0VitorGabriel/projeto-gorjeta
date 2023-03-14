@@ -35,14 +35,12 @@ input, p {
 }
 
 #id_porcentagem {
-    width: 410px;
+    min-width: 410px;
     height: 0px;
+    margin-right: 10px;
 }
 
 #id_valor {
     width: 300px;
-}
-
-#cifrao {
-    display: inline;
+    margin-left: 4px;
 }
