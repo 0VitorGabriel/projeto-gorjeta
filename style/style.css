@@ -35,7 +35,7 @@ input, p {
 }
 
 #id_porcentagem {
-    min-width: 410px;
+    max-width: 410px;
     height: 0px;
     margin-right: 10px;
 }
