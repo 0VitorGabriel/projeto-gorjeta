@@ -15,9 +15,9 @@ main {
     border-radius: 15px;
     background-color: #ffffff;
     max-width: 600px;
-    min-height: 200px;
+    max-height: 200px;
     margin: 100px auto; 
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
 }
 
 h1 {
@@ -42,4 +42,12 @@ input, p {
 #id_valor {
     width: 300px;
     margin-left: 4px;
+}
+
+.resultado {
+    display: none;
+}
+
+.mostra_resultado {
+    display: inline;
 }
