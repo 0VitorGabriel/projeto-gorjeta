@@ -11,11 +11,11 @@ let resultado_gorjeta = document.querySelector('output#gorjeta')
 
 let resultado_total = document.querySelector('output#total_gorjeta')
 
+let mostrar_porcentagem = document.querySelector('output#mostrar_porcentagem')
+
 // area aonde será mostrado o resultado
 
 let area_resultado = document.querySelector('div.resultado')
-
-let mostrar_porcentagem = document.querySelector('output#mostrar_porcentagem')
 
 porcentagem_gorjeta.addEventListener('input', function () {
     mostrar_porcentagem.innerHTML = Number(porcentagem_gorjeta.value)
