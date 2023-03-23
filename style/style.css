@@ -49,5 +49,5 @@ input, p {
 }
 
 .mostra_resultado {
-    display: inline;
+    display: block;
 }
