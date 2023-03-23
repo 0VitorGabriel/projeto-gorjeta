@@ -17,19 +17,34 @@ let mostrar_porcentagem = document.querySelector('output#mostrar_porcentagem')
 
 let area_resultado = document.querySelector('div.resultado')
 
-porcentagem_gorjeta.addEventListener('input', function () {
+porcentagem_gorjeta.addEventListener('input', function mostra_porcentagem() {
     mostrar_porcentagem.innerHTML = Number(porcentagem_gorjeta.value)
 })
 
+function verifica_dados_input() {
+    if (valor.value.length === 0) {
+        return false
+    } else {
+        return true
+    }
+}
+
 function calcula_gorjeta() {
-    resultado_gorjeta.innerHTML = Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
+    if (verifica_dados_input()) {
+        resultado_gorjeta.innerHTML = Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
+
+        area_resultado.classList.add('mostra_resultado')
+    }
 }
 function soma_gorjeta() {
-    resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+    if (verifica_dados_input()) {
+        resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+
+        area_resultado.classList.add('mostra_resultado')
+    }
 }
 
 function calcula_soma_gorjeta_na_tela() {
-    area_resultado.classList.add('mostra_resultado')
     calcula_gorjeta()
     soma_gorjeta()
 }
