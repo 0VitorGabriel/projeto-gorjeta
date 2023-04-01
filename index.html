@@ -9,25 +9,29 @@
 </head>
 <body>
     <main>
-        <h1>
-            Calculadora de gorjeta
-        </h1>
-        <p>
-            R$ <input type="number" name="valor" id="id_valor" placeholder="valor total">
-        </p>
-        <p>
-            <label for="id_porcentagem">porcentagem: </label>
-            <input type="range" name="porcentagem" id="id_porcentagem" value="0">%<output id="mostrar_porcentagem"></output>
-        </p>
-        <div class="resultado">
-            <h3>Resultado</h3>
-            <p>
-                Valor da gorjeta: R$<output id="gorjeta">0</output>
-            </p>
-            <p>
-                Valor total com a goreta: R$<output id="total_gorjeta">0</output>
-            </p>
-        </div>
+        <article>
+            <section id="area_inputs">
+                <h1>
+                    Calculadora de gorjeta
+                </h1>
+                <p>
+                    R$ <input type="number" name="valor" id="id_valor" placeholder="valor total">
+                </p>
+                <p>
+                    <label for="id_porcentagem">porcentagem: </label>
+                    <input type="range" name="porcentagem" id="id_porcentagem" value="0">%<output id="mostrar_porcentagem"></output>
+                </p>
+            </section>
+            <section class="resultado">
+                    <h3>Resultado</h3>
+                    <p>
+                        Valor da gorjeta: R$<output id="gorjeta">0</output>
+                    </p>
+                    <p>
+                        Valor total com a goreta: R$<output id="total_gorjeta">0</output>
+                    </p>
+            </section>
+        </article>
     </main>
 
     <script src="script/script.js"></script>
