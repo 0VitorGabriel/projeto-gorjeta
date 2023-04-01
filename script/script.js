@@ -15,7 +15,7 @@ let mostrar_porcentagem = document.querySelector('output#mostrar_porcentagem')
 
 // area aonde será mostrado o resultado
 
-let area_resultado = document.querySelector('div.resultado')
+let area_resultado = document.querySelector('section.resultado')
 
 porcentagem_gorjeta.addEventListener('input', function mostra_porcentagem() {
     mostrar_porcentagem.innerHTML = Number(porcentagem_gorjeta.value)
@@ -36,8 +36,10 @@ function calcula_gorjeta() {
         area_resultado.classList.add('mostra_resultado')
     }
 }
+
 function soma_gorjeta() {
     if (verifica_dados_input()) {
+
         resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
 
         area_resultado.classList.add('mostra_resultado')
