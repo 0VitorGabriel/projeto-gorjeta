@@ -29,28 +29,31 @@ function verifica_dados_input() {
     }
 }
 
+function mostra_resultado() {
+    area_resultado.classList.add('mostra_resultado')
+}
+
 function calcula_gorjeta() {
     if (verifica_dados_input()) {
-        resultado_gorjeta.innerHTML = Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
+        resultado_gorjeta.innerHTML = (
+            Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
+        ).toFixed(0)
 
-        area_resultado.classList.add('mostra_resultado')
+        mostra_resultado()
     }
 }
 
 function soma_gorjeta() {
     if (verifica_dados_input()) {
 
-        resultado_total.innerHTML = (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+        resultado_total.innerHTML = (
+            (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
+        ).toFixed(0)
 
-        area_resultado.classList.add('mostra_resultado')
+        mostra_resultado()
     }
 }
 
-function calcula_soma_gorjeta_na_tela() {
-    calcula_gorjeta()
-    soma_gorjeta()
-}
+porcentagem_gorjeta.addEventListener('input', calcula_gorjeta, soma_gorjeta)
 
-porcentagem_gorjeta.addEventListener('input', calcula_soma_gorjeta_na_tela)
-
-valor.addEventListener('input', calcula_soma_gorjeta_na_tela)
+valor.addEventListener('input', soma_gorjeta, soma_gorjeta)
