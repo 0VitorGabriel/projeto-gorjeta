@@ -52,3 +52,10 @@ input, p {
 .mostra_resultado {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 60vw;
+        padding: 30px 60px 30px 30px;
+    }
+}
