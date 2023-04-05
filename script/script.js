@@ -37,7 +37,7 @@ function calcula_gorjeta() {
     if (verifica_dados_input()) {
         resultado_gorjeta.innerHTML = (
             Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
-        ).toFixed(0)
+        ).toFixed(2).replace('.', ',')
 
         mostra_resultado()
     }
@@ -48,7 +48,7 @@ function soma_gorjeta() {
 
         resultado_total.innerHTML = (
             (Number(porcentagem_gorjeta.value) * Number(valor.value) / 100) + Number(valor.value)
-        ).toFixed(0)
+        ).toFixed(2).replace('.', ',')
 
         mostra_resultado()
     }
