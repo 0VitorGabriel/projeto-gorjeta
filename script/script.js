@@ -35,11 +35,13 @@ function mostra_resultado() {
 
 function calcula_gorjeta() {
     if (verifica_dados_input()) {
+        
         resultado_gorjeta.innerHTML = (
             Number(porcentagem_gorjeta.value) * Number(valor.value) / 100
         ).toFixed(2).replace('.', ',')
 
         mostra_resultado()
+        soma_gorjeta()
     }
 }
 
@@ -54,6 +56,6 @@ function soma_gorjeta() {
     }
 }
 
-porcentagem_gorjeta.addEventListener('input', calcula_gorjeta, soma_gorjeta)
+porcentagem_gorjeta.addEventListener('input', calcula_gorjeta)
 
-valor.addEventListener('input', soma_gorjeta, soma_gorjeta)
+valor.addEventListener('input', calcula_gorjeta)
